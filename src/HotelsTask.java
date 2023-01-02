@@ -39,7 +39,8 @@ public class HotelsTask {
 				
 				
 			case 3:
-				
+				Rooms CreateRoomTable = new Rooms();
+				CreateRoomTable.RoomsTable();
 				break;
 				
 			}	
