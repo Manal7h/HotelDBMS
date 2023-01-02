@@ -35,6 +35,9 @@ public class Guests {
 	    System.out.print("Room id :");
 	    Integer room_id = scanner.nextInt();
 	    
+	    System.out.print("Hotel_id :");
+	    Integer hotel_id = scanner.nextInt();
+	    
 	    System.out.print("Created date :");
 	    String created_date = scanner.next();
 	    

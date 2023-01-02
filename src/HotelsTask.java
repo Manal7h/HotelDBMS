@@ -43,6 +43,22 @@ public class HotelsTask {
 				CreateRoomTable.RoomsTable();
 				break;
 				
+			case 4:
+				Guests CreateGuestsTable = new Guests();
+				CreateGuestsTable.GuestsTable();
+				break;
+				
+				
+			case 5:
+				Employee_Type CreateEmployeeTypeTable = new Employee_Type();
+				CreateEmployeeTypeTable.EmployeeTypeTable();
+				break;
+				
+			case 6:
+				Employees CreateEmployeesTable = new Employees();
+				CreateEmployeesTable.EmployeesTable();
+				break;
+				
 			}	
 		}
 		while (true);
