@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class HotelsTask {
 	
@@ -16,7 +17,28 @@ public class HotelsTask {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
 		
+		MainMune();
+		do {
+			int select = sc.nextInt();
+			switch(select) {
+			case 1:
+				
+				break;
+				
+			case 2:
+				
+				break;
+				
+				
+			case 3:
+				
+				break;
+				
+			}	
+		}
+		while (true);
 
 	}
 
