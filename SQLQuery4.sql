@@ -1,0 +1,5 @@
+
+
+CREATE DATABASE HotelDBMS;
+
+USE HotelDBMS;
