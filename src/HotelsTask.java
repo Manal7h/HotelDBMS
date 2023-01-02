@@ -1,3 +1,4 @@
+import java.io.IOException;
 import java.util.Scanner;
 
 public class HotelsTask {
@@ -15,8 +16,10 @@ public class HotelsTask {
 		
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NumberFormatException, IOException {
 		// TODO Auto-generated method stub
+		
+
 		Scanner sc = new Scanner(System.in);
 		
 		MainMune();
@@ -24,6 +27,8 @@ public class HotelsTask {
 			int select = sc.nextInt();
 			switch(select) {
 			case 1:
+				Hotels CreateHotelsTable = new Hotels();
+				CreateHotelsTable.HotelsTable();
 				
 				break;
 				

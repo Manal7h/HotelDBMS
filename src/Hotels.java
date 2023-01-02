@@ -1,8 +1,14 @@
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Driver;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import java.util.Scanner;
 
 public class Hotels {
 
-	public static void main(String[] args) {
+	public static void HotelsTable() throws IOException {
+		
 		// TODO Auto-generated method stub
 		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
@@ -32,8 +38,35 @@ public class Hotels {
 	    String is_Active = scanner.next();
 	    
 	    
+	 
+	    Connection con = null;
 	    
 	    
+	    try {
+
+	        Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+	        DriverManager.registerDriver(driver);
+	        con = DriverManager.getConnection(url, user, pass);
+
+	        Statement st = con.createStatement();
+
+	        int m = st.executeUpdate(sql);
+	        if (m >=  0)
+	            System.out.println(
+	                    "inserted successfully : " + sql);
+	        else
+	            System.out.println("insertion failed");
+
+	        con.close();
+	    }
+        
+	    
+	    catch (Exception ex) {
+	        // Display message when exceptions occurs
+	        System.err.println(ex);
+	    }
+	    
+
+	}
 	}
 
-}
