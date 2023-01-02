@@ -4,14 +4,14 @@ import java.util.Scanner;
 public class HotelsTask {
 	
 	static void MainMune(){
-		System.out.print("Please Choice one Option:");
-		System.out.print("1. Create Hotels Table");
-		System.out.print("2. Create Room Type Table");
-		System.out.print("3. Create Room Table");
-		System.out.print("4. Create Guests Table");
-		System.out.print("5. Create Employee Type Table");
-		System.out.print("6. Create Employee Table");
-		System.out.print("7. Exit");
+		System.out.println("Please Choice one Option:");
+		System.out.println("1. Create Hotels Table");
+		System.out.println("2. Create Room Type Table");
+		System.out.println("3. Create Room Table");
+		System.out.println("4. Create Guests Table");
+		System.out.println("5. Create Employee Type Table");
+		System.out.println("6. Create Employee Table");
+		System.out.println("7. Exit");
 		
 		
 	}
