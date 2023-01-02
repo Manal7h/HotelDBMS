@@ -1,12 +1,16 @@
-<<<<<<< HEAD
 
 
 CREATE DATABASE HotelDBMS;
 
-=======
-
-
-CREATE DATABASE HotelDBMS;
-
->>>>>>> c11b525303f55b370b072b63b3585354639aabce
 USE HotelDBMS;
+
+SELECT * FROM Hotels;
+
+SELECT * FROM Room_Type;
+
+SELECT * FROM Rooms;
+
+SELECT * FROM Guests;
+
+
+SELECT * FROM Employee_Type;
