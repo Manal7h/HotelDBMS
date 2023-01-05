@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Employee_Type {
 	public static void EmployeeTypeTable() throws IOException{
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    

@@ -10,7 +10,7 @@ public class Rooms {
 
 	
 	public static void RoomsTable() throws IOException{
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    
@@ -67,7 +67,7 @@ public class Rooms {
 	}
 	
 	public static void insertIntoTable() {
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    
@@ -87,7 +87,7 @@ public class Rooms {
 	    
 	 // Inserting data using SQL query
 	    for(int i=0; i<=insert;i++) {
-        String sqlData = "insert into Hotels values( "+i+ numberToAdd +", "+ room_type_id +i+" ," + hotel_id +i+ ", '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        String sqlData = "insert into Rooms values( "+i+ numberToAdd +", "+ room_type_id +i+" ," + hotel_id +i+ ", '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
         
  
         Connection con = null;

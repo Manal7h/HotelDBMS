@@ -11,7 +11,7 @@ public class Room_Type {
 	
 	public static void RoomTypeTable() throws IOException {
 		
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    
@@ -70,7 +70,7 @@ public class Room_Type {
 	}
 	
 	public static void insertIntoTable() {
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    

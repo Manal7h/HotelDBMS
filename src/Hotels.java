@@ -11,12 +11,12 @@ public class Hotels {
 	public static void HotelsTable() throws IOException {
 		
 		// TODO Auto-generated method stub
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    
-	    String sql = "CREATE TABLE Hotels" + "(id INTEGER NOT NULL ," + "hotel_name VARCHAR(30) NOT NULL , " + "hotel_location VARCHAR(30),"
-	    + " created_date date NOT NULL , " + " updated_date date," + "is_Active BIT NOT NULL " + " PRIMARY KEY ( id ))";
+	    String sql = "CREATE TABLE Hotels" + "(id INTEGER PRIMARY KEY IDENTITY(1,1) ," + "hotel_name VARCHAR(30) NOT NULL , " + "hotel_location VARCHAR(30),"
+	    + " created_date date NOT NULL , " + " updated_date date," + "is_Active tinyint NOT NULL  )";
 	    
 	    
 //	    Scanner scanner = new Scanner(System.in);
@@ -71,7 +71,7 @@ public class Hotels {
 	}
 	
 	public static void insertIntoTable() {
-		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMS;encrypt=true;trustServerCertificate=true";
+		String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
 		String user = "sa";
 	    String pass = "root";
 	    
@@ -82,7 +82,7 @@ public class Hotels {
 	    String hotel_location = "Oman";
 	    String created_date = "2022-11-06";
 	    String updated_date = "2023-01-08";
-	    boolean is_Active = true;
+	    int is_Active = 1;
 		
 	    System.out.print("How many num of rows you be insert ? ");
 	    Integer insert = scanner.nextInt();
@@ -91,7 +91,7 @@ public class Hotels {
 	    
 	 // Inserting data using SQL query
 	    for(int i=0; i<=insert;i++) {
-        String sqlData = "insert into Hotels values( "+i+ numberToAdd +", '"+ hotel_name +i+"' ,'" + hotel_location + "', '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        String sqlData = "insert into Hotels (hotel_name ,hotel_location,created_date,updated_date,is_Active) values('"+ hotel_name +"' ,'" + hotel_location + "', '"+created_date+"','"+updated_date+"' , "+is_Active+")";
         
  
         Connection con = null;
