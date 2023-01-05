@@ -103,6 +103,8 @@ public class HotelsTask {
 				break;
 				
 			case 10:
+				Employee_Type EmployeeTypeTable = new Employee_Type();
+				EmployeeTypeTable.insertIntoTable();
 				break;			
 						
 			case 11:
@@ -111,6 +113,8 @@ public class HotelsTask {
 				break;
 				
 			case 12:
+				Employees EmployeesTable = new Employees();
+				EmployeesTable.insertIntoTable();
 				break;	
 				
 			}	

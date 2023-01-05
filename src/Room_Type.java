@@ -72,7 +72,7 @@ public class Room_Type {
 		
 		 // Inserting data using SQL query
 	    for(int i=0; i<=insert;i++) {
-        String sqlData = "insert into Room_Type values('"+ room_type_name+"' , '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        String sqlData = "insert into Room_Type values('"+ room_type_name+"' , '"+created_date+"','"+updated_date+"' , "+is_Active+")";
         
  
         Connection con = null;

@@ -12,54 +12,13 @@ public class Guests {
 		String user = "sa";
 	    String pass = "root";
 	    
-	    String sql = "CREATE TABLE Guests" + "(id INTEGER PRIMARY KEY ," + "guest_name VARCHAR(30) NOT NULL ," + 
+	    String sql = "CREATE TABLE Guests" + "(id INTEGER PRIMARY KEY IDENTITY(1,1) ," + "guest_name VARCHAR(30) NOT NULL ," + 
 	    		 "guest_phone VARCHAR(15) NOT NULL ," + "guest_accompanying_members INTEGER NOT NULL ," +
 	    		 "guest_payment_amount INTEGER NOT NULL ," +" room_id INTEGER REFERENCES Rooms(id), "+ 
-	    		" hotel_id INTEGER REFERENCES Hotels(id) , "+ " created_date date NOT NULL ," + " updated_date date," + "is_Active BIT NOT NULL )";
-	    
-	    
-	    Scanner scanner = new Scanner(System.in);
-	    System.out.print("Enter id :");
-	    Integer id = scanner.nextInt();
-
-	    System.out.print("Enter guest name :");
-	    String guest_name = scanner.next();
-
-	    System.out.print("Enter guest phone :");
-	    String guest_phone = scanner.next();
-
-	    System.out.print("Guest accompanying members :");
-	    Integer guest_accompanying_members = scanner.nextInt();
-
-	    System.out.print("Guest_payment_amount :");
-	    Integer guest_payment_amount = scanner.nextInt();
-
-	    System.out.print("Room id :");
-	    Integer room_id = scanner.nextInt();
-
-	    System.out.print("Hotel_id :");
-	    Integer hotel_id = scanner.nextInt();
-
-	    System.out.print("Created date :");
-	    String created_date = scanner.next();
-
-	    System.out.print("Updated date :");
-	    String updated_date = scanner.next();
-
-	    System.out.print("Is Active date :");
-	    String is_Active = scanner.next();
-	    
-	    
-	    
-	    
+	    		" hotel_id INTEGER REFERENCES Hotels(id) , "+ " created_date date NOT NULL ," + " updated_date date," + "is_Active tinyint NOT NULL )";
 	    
 	    Connection con = null;
-	    
-	    
-	    
-	    
-	    
-	    
+
 	    try {
 
 	        Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
@@ -104,10 +63,10 @@ public class Guests {
 	    int guest_accompanying_members = 12;
 	    int guest_payment_amount = 112;
 	    int room_id = 3;
-	    int hotel_id = 1234;
+	    int hotel_id = 1;
 	    String created_date = "2023-01-06";
 	    String updated_date = "2023-01-08";
-	    boolean is_Active = true;
+	    int is_Active = 1;
 	    
 
 	    System.out.print("How many num of rows you be insert ? ");
@@ -117,7 +76,7 @@ public class Guests {
 	    
 	 // Inserting data using SQL query
 	    for(int i=0; i<=insert;i++) {
-        String sqlData = "insert into Guests values( "+i+ numberToAdd +", '"+ guest_name +i+"' ,'" + guest_phone + "', "+guest_accompanying_members+", "+guest_payment_amount+", "+room_id+" , "+hotel_id+", '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        String sqlData = "insert into Guests values('"+ guest_name +"' ,'" + guest_phone + "', "+guest_accompanying_members+", "+guest_payment_amount+", "+room_id+" , "+hotel_id+", '"+created_date+"','"+updated_date+"' , "+is_Active+")";
         
  
         Connection con = null;

@@ -14,28 +14,10 @@ public class Rooms {
 		String user = "sa";
 	    String pass = "root";
 	    
-	    String sql = "CREATE TABLE Rooms" + "(id INTEGER PRIMARY KEY ," + "room_type_id INTEGER REFERENCES Rooms(id)," + 
-	    	    " hotel_id INTEGER REFERENCES Hotels(id) , "+ " created_date date NOT NULL ," + " updated_date date," + "is_Active BIT NOT NULL )";
+	    String sql = "CREATE TABLE Rooms" + "(id INTEGER PRIMARY KEY IDENTITY(1,1)," + "room_type_id INTEGER REFERENCES Rooms(id)," + 
+	    	    " hotel_id INTEGER REFERENCES Hotels(id) , "+ " created_date date NOT NULL ," + " updated_date date," + "is_Active tinyint NOT NULL )";
 		
-//	    Scanner scanner = new Scanner(System.in);
-//	    System.out.print("Enter id :");
-//	    Integer id = scanner.nextInt();
-//	    
-//	    System.out.print("Enter room type id :");
-//	    Integer room_type_id = scanner.nextInt();
-//	    
-//	    System.out.print("Enter hotel id :");
-//	    Integer hotel_id = scanner.nextInt();
-//	    
-//	    System.out.print("Created date :");
-//	    String created_date = scanner.next();
-//	    
-//	    System.out.print("Updated date :");
-//	    String updated_date = scanner.next();
-//	    
-//	    System.out.print("Is Active date :");
-//	    String is_Active = scanner.next();
-	   
+
 	    
 	    Connection con = null;
 	    
@@ -77,7 +59,7 @@ public class Rooms {
 	    int hotel_id = 3 ;
 	    String created_date = "2023-01-10";
 	    String updated_date = "2023-01-08";
-	    boolean is_Active = true;
+	    int is_Active = 1;
 	    
 	    
 	    System.out.print("How many num of rows you be insert ? ");
@@ -87,7 +69,7 @@ public class Rooms {
 	    
 	 // Inserting data using SQL query
 	    for(int i=0; i<=insert;i++) {
-        String sqlData = "insert into Rooms values( "+i+ numberToAdd +", "+ room_type_id +i+" ," + hotel_id +i+ ", '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        String sqlData = "insert into Rooms values("+ room_type_id +" ," + hotel_id +", '"+created_date+"','"+updated_date+"' , "+is_Active+")";
         
  
         Connection con = null;
