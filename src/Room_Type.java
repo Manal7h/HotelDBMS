@@ -15,26 +15,8 @@ public class Room_Type {
 		String user = "sa";
 	    String pass = "root";
 	    
-	    String sql = "CREATE TABLE Room_Type" + "(id INTEGER NOT NULL ," + "room_type_name VARCHAR(30) NOT NULL , " + 
-	    " created_date date , " + " updated_date date," + "is_Active BIT NOT NULL " + " PRIMARY KEY ( id ))";
-	    
-	    
-//	    Scanner scanner = new Scanner(System.in);
-//	    System.out.print("Enter id :");
-//	    Integer id = scanner.nextInt();
-//	    
-//	    System.out.print("Enter room type name :");
-//	    String room_type_name = scanner.next();
-//	    
-//	    System.out.print("Created date :");
-//	    String created_date = scanner.next();
-//	    
-//	    System.out.print("Updated date :");
-//	    String updated_date = scanner.next();
-//	    
-//	    System.out.print("Is Active date :");
-//	    String is_Active = scanner.next();
-	    
+	    String sql = "CREATE TABLE Room_Type" + "(id INTEGER PRIMARY KEY IDENTITY(1,1) ," + "room_type_name VARCHAR(30) NOT NULL , " + 
+	    " created_date date , " + " updated_date date," + "is_Active tinyint NOT NULL )";
 	    
 	 
 	    Connection con = null;
@@ -79,7 +61,7 @@ public class Room_Type {
 	    String room_type_name = "Roze" ;
 	    String created_date = "2022-12-12";
 	    String updated_date = "2023-01-08";
-	    boolean is_Active = true;
+	    int is_Active = 1;
 	    
 	    
 	    System.out.print("How many num of rows you be insert ? ");
@@ -90,7 +72,7 @@ public class Room_Type {
 		
 		 // Inserting data using SQL query
 	    for(int i=0; i<=insert;i++) {
-        String sqlData = "insert into Room_Type values( "+i+ numberToAdd +", '"+ room_type_name +i+"' , '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        String sqlData = "insert into Room_Type values('"+ room_type_name+"' , '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
         
  
         Connection con = null;
