@@ -9,9 +9,10 @@ public class HotelsTask {
 		System.out.println("2. Create Room Type Table");
 		System.out.println("3. Create Room Table");
 		System.out.println("4. Create Guests Table");
-		System.out.println("5. Create Employee Type Table");
-		System.out.println("6. Create Employee Table");
-		System.out.println("7. Exit");
+		System.out.println("5. Insert to Guests Table");
+		System.out.println("6. Create Employee Type Table");
+		System.out.println("7. Create Employee Table");
+		System.out.println("8. Exit");
 		
 		
 	}
@@ -48,13 +49,17 @@ public class HotelsTask {
 				CreateGuestsTable.GuestsTable();
 				break;
 				
-				
 			case 5:
+				Guests GuestsTable = new Guests();
+				GuestsTable.insertIntoTable();
+				break;
+				
+			case 6:
 				Employee_Type CreateEmployeeTypeTable = new Employee_Type();
 				CreateEmployeeTypeTable.EmployeeTypeTable();
 				break;
 				
-			case 6:
+			case 7:
 				Employees CreateEmployeesTable = new Employees();
 				CreateEmployeesTable.EmployeesTable();
 				break;
