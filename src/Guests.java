@@ -45,26 +45,7 @@ public class Guests {
 	        // Display message when exceptions occurs
 	        System.err.println(ex);
 	    }}
-//	    System.out.print("Enter id :");
-//	    Integer id = scanner.nextInt();
-//	    System.out.print("Enter guest name :");
-//	    String guest_name = scanner.next(); 
-//	    System.out.print("Enter guest phone :");
-//	    String guest_phone = scanner.next();
-//	    System.out.print("Guest accompanying members :");
-//	    Integer guest_accompanying_members = scanner.nextInt();
-//	    System.out.print("Guest_payment_amount :");
-//	    Integer guest_payment_amount = scanner.nextInt();
-//	    System.out.print("Room id :");
-//	    Integer room_id = scanner.nextInt();
-//	    System.out.print("Hotel_id :");
-//	    Integer hotel_id = scanner.nextInt();
-//	    System.out.print("Created date :");
-//	    String created_date = scanner.next();
-//	    System.out.print("Updated date :");
-//	    String updated_date = scanner.next();
-//	    System.out.print("Is Active date :");
-//	    String is_Active = scanner.next();
+
 	
 	
 	    public static void insertIntoTable(){

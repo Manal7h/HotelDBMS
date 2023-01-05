@@ -5,14 +5,41 @@ public class HotelsTask {
 	
 	static void MainMune(){
 		System.out.println("Please Choice one Option:");
+		
 		System.out.println("1. Create Hotels Table");
-		System.out.println("2. Create Room Type Table");
-		System.out.println("3. Create Room Table");
-		System.out.println("4. Create Guests Table");
-		System.out.println("5. Insert to Guests Table");
-		System.out.println("6. Create Employee Type Table");
-		System.out.println("7. Create Employee Table");
-		System.out.println("8. Exit");
+		System.out.println("2. Insert Into Hotels Table");
+		
+		
+		System.out.println("                                 ");
+		
+		
+		
+		System.out.println("3. Create Room Type Table");
+		System.out.println("4. Insert Into Room Type Table");
+		
+		System.out.println("                                 ");
+		
+		System.out.println("5. Create Room Table");
+		System.out.println("6. Insert Into Room Table");
+		
+		System.out.println("                                 ");
+		
+		System.out.println("7. Create Guests Table");
+		System.out.println("8. Insert Into Guests Table");
+		
+		System.out.println("                                 ");
+		
+		System.out.println("9. Create Employee Type Table");
+		System.out.println("10. Insert Into Employee Type Table");
+		
+		System.out.println("                                 ");
+		
+		System.out.println("11. Create Employee Table");
+		System.out.println("12. Insert Into Employee Table");
+		
+		System.out.println("                                 ");
+		
+		System.out.println("13. Exit");
 		
 		
 	}
@@ -27,6 +54,7 @@ public class HotelsTask {
 		do {
 			int select = sc.nextInt();
 			switch(select) {
+			
 			case 1:
 				Hotels CreateHotelsTable = new Hotels();
 				CreateHotelsTable.HotelsTable();
@@ -34,35 +62,52 @@ public class HotelsTask {
 				break;
 				
 			case 2:
+				Hotels HotelsTable = new Hotels();
+				HotelsTable.insertIntoTable();
+				
+				break;
+				
+			case 3:
 				Room_Type CreateRoomTypeTable = new Room_Type();
 				CreateRoomTypeTable.RoomTypeTable();
 				break;
 				
+			case 4:
+				break;	
 				
-			case 3:
+			case 5:
 				Rooms CreateRoomTable = new Rooms();
 				CreateRoomTable.RoomsTable();
 				break;
 				
-			case 4:
+			case 6:
+				break;	
+				
+			case 7:
 				Guests CreateGuestsTable = new Guests();
 				CreateGuestsTable.GuestsTable();
 				break;
-				
-			case 5:
+					
+			case 8:
 				Guests GuestsTable = new Guests();
 				GuestsTable.insertIntoTable();
 				break;
 				
-			case 6:
+			case 9:
 				Employee_Type CreateEmployeeTypeTable = new Employee_Type();
 				CreateEmployeeTypeTable.EmployeeTypeTable();
 				break;
 				
-			case 7:
+			case 10:
+				break;			
+						
+			case 11:
 				Employees CreateEmployeesTable = new Employees();
 				CreateEmployeesTable.EmployeesTable();
 				break;
+				
+			case 12:
+				break;	
 				
 			}	
 		}
