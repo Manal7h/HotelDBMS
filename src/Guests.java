@@ -16,6 +16,10 @@ public class Guests {
 	    		 "guest_payment_amount INTEGER NOT NULL ," +" room_id INTEGER REFERENCES Rooms(id) , "+ 
 	    		 " hotel_id INTEGER REFERENCES Hotels(id) , "+ " created_date date NOT NULL ," + " updated_date date," + "is_Active BIT NOT NULL )";
 		
+	 // Inserting data using SQL query
+        String sqlData = "insert into Guests values( "+ id+" , '"+ guest_name +"' ,'" + guest_phone + "', "+guest_accompanying_members+", "+guest_payment_amount+", "+room_id+" , "+hotel_id+", '"+created_date+"','"+updated_date+"' , '"+is_Active+"')";
+        
+
 	    Scanner scanner = new Scanner(System.in);
 	    System.out.print("Enter id :");
 	    Integer id = scanner.nextInt();
@@ -58,14 +62,19 @@ Connection con = null;
 
 	        Statement st = con.createStatement();
 
-	        int m = st.executeUpdate(sql);
-	        if (m >=  0)
-	            System.out.println(
-	                    "inserted successfully : " + sql);
-	        else
-	            System.out.println("insertion failed");
+	        
+	     // Executing query
+            int m = st.executeUpdate(sqlData);
+            if (m >=  1)
+                System.out.println(
+                        "inserted successfully : " + sqlData);
+            else
+                System.out.println("insertion failed");
 
-	        con.close();
+            // Closing the connections
+            con.close();
+            
+            
 	    }
         
 	    
@@ -75,4 +84,23 @@ Connection con = null;
 	    }
 	    
 	}
-}
+	
+//	public static void readFromTable() {
+//		// taking input with Scanner 
+//		int userInput = 100; // <= maybe user wants 100 employee_type
+//		String sql = "SELECT TOP " + userInput + " FROM Employee_Type;";
+//		// Connection, Driver, Driver Register
+//		try {
+//			 Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+//		        DriverManager.registerDriver(driver);
+//		        
+//		ResultSet rs = statement.executeQuery(sql); //ran the Q like sql
+//		
+//		
+//		}
+//		 catch (Exception ex) {
+//		        // Display message when exceptions occurs
+//		        System.err.println(ex);
+//		    }
+	}
+	
