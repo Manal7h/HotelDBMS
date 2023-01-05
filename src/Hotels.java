@@ -54,9 +54,9 @@ public class Hotels {
 	        int m = st.executeUpdate(sql);
 	        if (m >=  0)
 	            System.out.println(
-	                    "inserted successfully : " + sql);
+	                    "Create successfully : " + sql);
 	        else
-	            System.out.println("insertion failed");
+	            System.out.println("Create failed");
 
 	        con.close();
 	    }

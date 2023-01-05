@@ -73,6 +73,8 @@ public class HotelsTask {
 				break;
 				
 			case 4:
+				Room_Type RoomTypeTable = new Room_Type();
+				RoomTypeTable.insertIntoTable();
 				break;	
 				
 			case 5:
