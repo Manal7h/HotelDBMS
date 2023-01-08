@@ -40,10 +40,14 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		
 		System.out.println("13. Read From Hotels Table");
+		System.out.println("                                 ");
 		System.out.println("14. get By Id ");
+		System.out.println("                                 ");
 		System.out.println("15. update By Id ");
-		
-		System.out.println("16. Exit");
+		System.out.println("                                 ");
+		System.out.println("16. update By Id ");
+		System.out.println("                                 ");
+		System.out.println("17. Exit");
 		
 		
 	}
@@ -136,6 +140,11 @@ public class HotelsTask {
 				readFromTable update = new readFromTable();
 				update.updateById();
 				break;
+				
+			case 16:
+				readFromTable delete = new readFromTable();
+				delete.deleteById();
+				break;	
 			
 				
 			}	

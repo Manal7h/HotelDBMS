@@ -168,6 +168,44 @@ public class readFromTable {
 			System.out.println(ex);
 		}
 	}
+	
+	
+		public static void deleteById() {
+		
+			String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
+			String user = "sa";
+			String pass = "root";
+			
+        Connection con = null;
+        
+        try {
+        	
+            Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+            DriverManager.registerDriver(driver);
+            con = DriverManager.getConnection(url, user, pass);
+            
+            Statement st = con.createStatement();
+            
+            Scanner scanner=new Scanner(System.in);
+            
+        	System.out.println("Enter id that you want to delete: ");
+        	
+            int InputId =scanner.nextInt();
+            
+            int count=0;
+            
+            String sql ="DELETE FROM Hotels WHERE id = '"+ InputId +"'";
+            
+            ResultSet result=st.executeQuery(sql);
+            }
+        
+        
+        catch (Exception ex) {
+            System.err.println(ex);
+        }
+        
+      }
+	
 
 
 
