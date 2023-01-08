@@ -39,7 +39,10 @@ public class HotelsTask {
 		
 		System.out.println("                                 ");
 		
-		System.out.println("13. Exit");
+		System.out.println("13. Read From Hotels Table");
+		System.out.println("14. getById ");
+		
+		System.out.println("15. Exit");
 		
 		
 	}
@@ -116,6 +119,18 @@ public class HotelsTask {
 				Employees EmployeesTable = new Employees();
 				EmployeesTable.insertIntoTable();
 				break;	
+				
+				
+			case 13:
+				readFromTable readHotels = new readFromTable();
+				readHotels.readFromTable();
+				break;	
+				
+			case 14:
+				readFromTable ById = new readFromTable();
+				ById.getById();
+				break;	
+			
 				
 			}	
 		}
