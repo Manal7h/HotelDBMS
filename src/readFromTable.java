@@ -204,18 +204,49 @@ public class readFromTable {
         catch (Exception ex) {
             System.err.println(ex);
         }
+		}
+        
+        
+        
+        
+        
+public static void makeIsActiveFalseById() {
+		
+	String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
+	String user = "sa";
+	String pass = "root";
+	
+	
+	Connection con = null;
+	
+	        try {
+	            Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+	            
+	            DriverManager.registerDriver(driver);
+	            
+	            con = DriverManager.getConnection(url, user, pass);
+	            
+	            Statement st = con.createStatement();
+	            
+	            Scanner scanner = new Scanner(System.in);
+	            
+	        	System.out.println("Enter id that you want to unactived: ");
+	        	
+	            int InputId =scanner.nextInt();
+	            
+	            int count=0;
+	            
+	            String sql = "UPDATE Hotels SET is_Active = 0  WHERE id <= "+InputId;
+	            
+	            int m =st.executeUpdate(sql);
+	            
+	            }
+	        catch (Exception ex) {
+	            System.err.println(ex);
+	        }
+        
         
       }
 	
-
-
-
-
-
-
-
-
-
-
 
 }

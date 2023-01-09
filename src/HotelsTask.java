@@ -47,7 +47,9 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("16. delete By Id ");
 		System.out.println("                                 ");
-		System.out.println("17. Exit");
+		System.out.println("17. make Is Active False By Id ");
+		System.out.println("                                 ");
+		System.out.println("18. Exit");
 		
 		
 	}
@@ -144,6 +146,11 @@ public class HotelsTask {
 			case 16:
 				readFromTable delete = new readFromTable();
 				delete.deleteById();
+				break;	
+				
+			case 17:
+				readFromTable IsActiveFalseById = new readFromTable();
+				IsActiveFalseById.makeIsActiveFalseById();
 				break;	
 			
 				
