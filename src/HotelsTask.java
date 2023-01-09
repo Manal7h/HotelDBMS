@@ -49,7 +49,9 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("17. make Is Active False By Id ");
 		System.out.println("                                 ");
-		System.out.println("18. Exit");
+		System.out.println("18. Guests who's name end with 'E' ");
+		System.out.println("                                 ");
+		System.out.println("20. Exit");
 		
 		
 	}
@@ -151,7 +153,12 @@ public class HotelsTask {
 			case 17:
 				readFromTable IsActiveFalseById = new readFromTable();
 				IsActiveFalseById.makeIsActiveFalseById();
-				break;	
+				break;
+				
+			case 18:
+				HotelManagement nameEndWithE = new HotelManagement();
+				nameEndWithE.nameEnd();
+				break;		
 			
 				
 			}	
