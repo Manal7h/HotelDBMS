@@ -114,22 +114,5 @@ public class Guests {
 	    }}
 }
 	
-//	public static void readFromTable() {
-//		// taking input with Scanner 
-//		int userInput = 100; // <= maybe user wants 100 employee_type
-//		String sql = "SELECT TOP " + userInput + " FROM Employee_Type;";
-//		// Connection, Driver, Driver Register
-//		try {
-//			 Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
-//		        DriverManager.registerDriver(driver);
-//		        
-//		ResultSet rs = statement.executeQuery(sql); //ran the Q like sql
-//		
-//		
-//		}
-//		 catch (Exception ex) {
-//		        // Display message when exceptions occurs
-//		        System.err.println(ex);
-//		    }
-	
+
 	

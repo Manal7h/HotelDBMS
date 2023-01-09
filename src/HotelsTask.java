@@ -45,7 +45,7 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("15. update By Id ");
 		System.out.println("                                 ");
-		System.out.println("16. update By Id ");
+		System.out.println("16. delete By Id ");
 		System.out.println("                                 ");
 		System.out.println("17. Exit");
 		

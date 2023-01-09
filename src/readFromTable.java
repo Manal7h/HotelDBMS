@@ -196,7 +196,8 @@ public class readFromTable {
             
             String sql ="DELETE FROM Hotels WHERE id = '"+ InputId +"'";
             
-            ResultSet result=st.executeQuery(sql);
+            
+             int s =st.executeUpdate(sql);
             }
         
         
