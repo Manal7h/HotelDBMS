@@ -51,6 +51,8 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("18. Guests who's name end with 'E' ");
 		System.out.println("                                 ");
+		System.out.println("19. Rooms where guests are paying more than 1000 ");
+		System.out.println("                                 ");
 		System.out.println("20. Exit");
 		
 		
@@ -158,7 +160,12 @@ public class HotelsTask {
 			case 18:
 				HotelManagement nameEndWithE = new HotelManagement();
 				nameEndWithE.nameEnd();
-				break;		
+				break;	
+				
+			case 19:
+				HotelManagement paying = new HotelManagement();
+				paying.guestsPaying();
+				break;	
 			
 				
 			}	
