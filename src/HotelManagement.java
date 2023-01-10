@@ -30,7 +30,9 @@ public class HotelManagement {
 
 	    	PreparedStatement pstmt2 = con.prepareStatement(sql);
 	        ResultSet result = pstmt2.executeQuery();
-			if (result.next()) {
+	        
+	        
+			while (result.next()) {
 				
 				String guest_name = result.getString("guest_name");
 			
@@ -38,6 +40,8 @@ public class HotelManagement {
 			}
            
 	    }
+	    
+	    
     catch (Exception ex) {
         System.err.println(ex);
     }
