@@ -180,7 +180,7 @@ public class HotelManagement {
 					String user = "sa";
 				    String pass = "root";
 				    
-				    String sql = "  SELECT * FROM Room_Type WHERE room_type_name = 'DELUXE' AND is_Active = 0 ";
+				    String sql = "  SELECT * FROM Room_Type WHERE room_type_name = 'DELUXE' AND is_Active = '0' ";
 				    
 				    Connection con = null;	
 
@@ -200,6 +200,50 @@ public class HotelManagement {
 						while (result.next()) {
 							
 							
+							
+							
+							String room_type_name = result.getString(2);
+							Date create_date = result.getDate(3);
+							Date update_date = result.getDate(4);
+							String is_Active = result.getString(5);
+							
+							
+							System.out.println("\n " + "room type name: " + room_type_name + "\n " +
+							"Created Date :" + create_date + "\n " + "Updated date : " + update_date 
+							+ "\n " + "Is Active : " + is_Active);
+							
+						}
+					}
+				       catch (Exception ex) {
+			        System.err.println(ex);
+			    }
+			
+}
+				
+	public void  hOrActive()	{
+					
+			    	String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
+					String user = "sa";
+				    String pass = "root";
+				    
+				    String sql = "  SELECT * FROM Room_Type WHERE room_type_name LIKE '%H%' OR (is_Active = 1 AND id > 5 ) ";
+				    
+				    Connection con = null;	
+
+
+				    try {
+
+				        Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+				        DriverManager.registerDriver(driver);
+				        con = DriverManager.getConnection(url, user, pass);
+
+				       
+
+				    	PreparedStatement pstmt2 = con.prepareStatement(sql);
+				        ResultSet result = pstmt2.executeQuery();
+				        
+				        
+						while (result.next()) {
 							
 							
 							String room_type_name = result.getString(2);

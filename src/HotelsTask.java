@@ -59,7 +59,9 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("22. All rooms which are not active but room type is 'Deluxe' ");
 		System.out.println("                                 ");
-		System.out.println("23. Exit");
+		System.out.println("23. All room type in hotels who's name have 'H' or are active but have more than 5 rooms ");
+		System.out.println("                                 ");
+		System.out.println("24. Exit");
 		
 		
 	}
@@ -184,9 +186,14 @@ public class HotelsTask {
 				break;
 				
 			case 22:
-				HotelManagement isnotActive = new HotelManagement();
-				isnotActive.isnotActive();
+				HotelManagement isnotActivee = new HotelManagement();
+				isnotActivee.isnotActive();
 				break;	
+				
+			case 23:
+				HotelManagement hOrActive = new HotelManagement();
+				hOrActive.hOrActive();
+				break;		
 				
 			}	
 		}
