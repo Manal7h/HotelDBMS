@@ -59,7 +59,7 @@ public class Rooms {
 	    int hotel_id = 3 ;
 	    String created_date = "2023-01-10";
 	    String updated_date = "2023-01-08";
-	    int is_Active = 1;
+	    int is_Active = 0;
 	    
 	    
 	    System.out.print("How many num of rows you be insert ? ");

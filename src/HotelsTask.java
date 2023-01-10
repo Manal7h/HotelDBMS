@@ -57,7 +57,9 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("21. Guests who have 'A' in their name ");
 		System.out.println("                                 ");
-		System.out.println("22. Exit");
+		System.out.println("22. All rooms which are not active but room type is 'Deluxe' ");
+		System.out.println("                                 ");
+		System.out.println("23. Exit");
 		
 		
 	}
@@ -180,6 +182,11 @@ public class HotelsTask {
 				HotelManagement nameAA = new HotelManagement();
 				nameAA.nameA();
 				break;
+				
+			case 22:
+				HotelManagement isnotActive = new HotelManagement();
+				isnotActive.isnotActive();
+				break;	
 				
 			}	
 		}

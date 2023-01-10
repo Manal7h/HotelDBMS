@@ -61,7 +61,7 @@ public class Room_Type {
 	    String room_type_name = "Roze" ;
 	    String created_date = "2022-12-12";
 	    String updated_date = "2023-01-08";
-	    int is_Active = 1;
+	    int is_Active = 0;
 	    
 	    
 	    System.out.print("How many num of rows you be insert ? ");
