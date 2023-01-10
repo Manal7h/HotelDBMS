@@ -55,7 +55,9 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("20. Count of guests who are staing in 'DELUXE' rooms ");
 		System.out.println("                                 ");
-		System.out.println("21. Exit");
+		System.out.println("21. Guests who have 'A' in their name ");
+		System.out.println("                                 ");
+		System.out.println("22. Exit");
 		
 		
 	}
@@ -174,6 +176,10 @@ public class HotelsTask {
 				count.countGuests();
 				break;	
 			
+			case 21:
+				HotelManagement nameAA = new HotelManagement();
+				nameAA.nameA();
+				break;
 				
 			}	
 		}

@@ -58,7 +58,7 @@ public class Guests {
 	    Scanner scanner = new Scanner(System.in);
 	    
 	   
-	    String guest_name = "Reem" ;
+	    String guest_name = "Manal" ;
 	    String guest_phone = "968-12345678";
 	    int guest_accompanying_members = 12;
 	    int guest_payment_amount = 112;

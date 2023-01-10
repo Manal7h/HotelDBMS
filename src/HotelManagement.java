@@ -134,7 +134,44 @@ public class HotelManagement {
 			       }
 			
 				}	
-			
+				
+				
+				
+				
+				public void nameA()	{
+					
+			    	String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
+					String user = "sa";
+				    String pass = "root";
+				    
+				    String sql = " SELECT * FROM Guests WHERE guest_name LIKE '%A%'";
+				    
+				    Connection con = null;	
+
+
+				    try {
+
+				        Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+				        DriverManager.registerDriver(driver);
+				        con = DriverManager.getConnection(url, user, pass);
+
+				       
+
+				    	PreparedStatement pstmt2 = con.prepareStatement(sql);
+				        ResultSet result = pstmt2.executeQuery();
+				        
+				        
+						while (result.next()) {
+							
+							String guest_name = result.getString("guest_name");
+						
+							System.out.println(guest_name);
+						}
+					}
+				       catch (Exception ex) {
+			        System.err.println(ex);
+			    }
+			}
 }
 
 
