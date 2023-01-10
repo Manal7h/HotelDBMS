@@ -95,6 +95,46 @@ public class HotelManagement {
 			       }
     
 	}
+			
+				public void countGuests()	{
+				
+		    	String url = "jdbc:sqlserver://localhost:1433;databaseName=HotelDBMSS;encrypt=true;trustServerCertificate=true";
+				String user = "sa";
+			    String pass = "root";
+			    
+			    String sql = "	SELECT COUNT(room_type_name) AS Count_of_guests FROM Room_Type WHERE room_type_name= 'DELUXE'";
+			    
+			    Connection con = null;	
+			    try {
+
+			        Driver driver = (Driver) Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver").newInstance();
+			        DriverManager.registerDriver(driver);
+			        con = DriverManager.getConnection(url, user, pass);
+			        
+			    	PreparedStatement pstmt2 = con.prepareStatement(sql);
+			        ResultSet result = pstmt2.executeQuery();
+			        
+			        while (result.next()) {
+			        	
+
+						String room_type_name = result.getString(1);
+
+						
+
+						System.out.println("Count of guests who are staing in 'DELUXE' rooms : "+" " + room_type_name);
+			        	
+			        	
+			        	
+			        }
+			        
+			    
+				}
+			       catch (Exception ex) {
+			           System.err.println(ex);
+			       }
+			
+				}	
+			
 }
 
 

@@ -53,7 +53,9 @@ public class HotelsTask {
 		System.out.println("                                 ");
 		System.out.println("19. Rooms where guests are paying more than 1000 ");
 		System.out.println("                                 ");
-		System.out.println("20. Exit");
+		System.out.println("20. Count of guests who are staing in 'DELUXE' rooms ");
+		System.out.println("                                 ");
+		System.out.println("21. Exit");
 		
 		
 	}
@@ -165,6 +167,11 @@ public class HotelsTask {
 			case 19:
 				HotelManagement paying = new HotelManagement();
 				paying.guestsPaying();
+				break;	
+				
+			case 20:
+				HotelManagement count = new HotelManagement();
+				count.countGuests();
 				break;	
 			
 				
